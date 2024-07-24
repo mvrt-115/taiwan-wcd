@@ -9,14 +9,11 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Servo extends SubsystemBase {
 
-  private final XRPServo servo = new XRPServo(4);
+  // servo
+
 
   /** Creates a new Servo. */
   public Servo() {}
-
-  public void setAngle(double degrees){
-    servo.setAngle(degrees);
-  }
 
   @Override
   public void periodic() {

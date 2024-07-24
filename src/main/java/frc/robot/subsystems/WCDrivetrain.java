@@ -4,28 +4,15 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.xrp.XRPMotor;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class WCDrivetrain extends SubsystemBase {
 
-  private final XRPMotor leftMotor = new XRPMotor(0);
-  private final XRPMotor rightMotor = new XRPMotor(1);
+  // motors
+
 
   /** Creates a new WCDrivetrain. */
   public WCDrivetrain() {}
-
-  public void move(double speed, double turn){
-    double left = speed + turn;
-    double right = speed - turn;
-
-    leftMotor.set(left);
-    rightMotor.set(-right);
-  }
-
-  public void stop(){
-    move(0,0);
-  }
 
   @Override
   public void periodic() {

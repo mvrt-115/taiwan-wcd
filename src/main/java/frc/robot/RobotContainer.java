@@ -21,25 +21,12 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
  */
 public class RobotContainer {
   
-  private final WCDrivetrain drivetrain = new WCDrivetrain();
-  private final Drive driveCommand = new Drive(drivetrain);
-  private final Servo servo = new Servo();
-
-  private static Joystick joystick = new Joystick(0);
-  private JoystickButton buttonA = new JoystickButton(joystick, 1);
+  // declare and initialize subsystems, commands, joysticks + button here:
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
-  }
-
-  public static double getSpeed(){
-    return -joystick.getRawAxis(1)*0.5;
-  }
-
-  public static double getTurn(){
-    return joystick.getRawAxis(2)*0.4;
   }
 
   /**
@@ -49,9 +36,7 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    drivetrain.setDefaultCommand(driveCommand);
-
-    buttonA.onTrue(new InstantCommand(() -> servo.setAngle(90))).onFalse(new InstantCommand(() -> servo.setAngle(0)));
+    
   }
 
   /**

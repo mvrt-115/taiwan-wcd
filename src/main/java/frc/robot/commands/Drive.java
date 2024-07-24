@@ -10,25 +10,25 @@ import frc.robot.subsystems.WCDrivetrain;
 
 public class Drive extends Command {
 
-  private WCDrivetrain drivetrain;
+  
 
   /** Creates a new Drive. */
-  public Drive(WCDrivetrain drivetrain) {
-    this.drivetrain = drivetrain;
+  public Drive() {
+    
     // Use addRequirements() here to declare subsystem dependencies.
-    addRequirements(drivetrain);
+
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    drivetrain.stop();
+    
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    drivetrain.move(RobotContainer.getSpeed(), RobotContainer.getTurn());
+    
   }
 
   // Called once the command ends or is interrupted.
